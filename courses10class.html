@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Best Coaching & Colleges - DYF</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f9fb;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      background: #0d1b2a;
+      color: #fff;
+      width: 100%;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .logo {
+      width: 100px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+      animation: bounce 0.7s infinite alternate;
+    }
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-5px); }
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    nav ul li { margin: 0 15px; }
+    nav ul li a {
+      color: #80deea;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover { color: #ffd166; }
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+    h2.section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #007c91;
+      margin-bottom: 30px;
+    }
+    .college-section {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    .college-group-title {
+      font-size: 1.8rem;
+      color: #007c91;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+    .college-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      justify-content: center;
+    }
+    .college-card { text-decoration: none; }
+    .college-box {
+      background: linear-gradient(145deg, #ffffff, #e6f7ff);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: 0.3s ease-in-out;
+      text-align: center;
+      border: 2px solid #b2ebf2;
+    }
+    .college-box:hover {
+      background: linear-gradient(145deg, #e0f7fa, #ffffff);
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    .college-box h3 {
+      color: #0d1b2a;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+    .college-box p {
+      color: #444;
+      font-size: 0.95rem;
+    }
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .filter-buttons button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      background-color: #007c91;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .filter-buttons button:hover { background-color: #005f6b; }
+    .filter-buttons button.active {
+      background-color: #ffd166;
+      color: #0d1b2a;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+    footer {
+      background: #0d1b2a;
+      color: #fff;
+      width: 100%;
+      padding: 30px 20px 15px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .footer-contact h2 {
+      font-size: 1.4rem;
+      color: #ffcc70;
+      margin-bottom: 8px;
+    }
+    .footer-contact p {
+      font-size: 1rem;
+      color: #cce7ff;
+      margin-bottom: 20px;
+    }
+    .footer-bottom {
+      font-size: 0.9rem;
+      color: #cccccc;
+    }
+    @media (max-width: 768px) {
+      nav ul { flex-direction: column; }
+      nav ul li { margin: 10px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="DYF Logo" class="logo" />
+    <h1 style="font-size: 2.5rem; font-weight: 800; color: #ffcc70;">Best Coaching & Colleges</h1>
+    <nav>
+      <ul>
+        <li><a href="HOMEPAGE.html">Home</a></li>
+        <li><a href="10 class page.html">Jobs</a></li>
+        <li><a href="CONTACTPAGEFORALL.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="section-title">Discover the Best Coaching Centres & Colleges 🎓</h2>
+
+    <div class="filter-buttons" role="toolbar" aria-label="Filter coaching categories">
+      <button data-cat="all" onclick="filterColleges('all')">All</button>
+      <button data-cat="computer" onclick="filterColleges('computer')">Computer & IT</button>
+      <button data-cat="technical" onclick="filterColleges('technical')">Technical & Vocational</button>
+      <button data-cat="creative" onclick="filterColleges('creative')">Creative & Design</button>
+      <button data-cat="hospitality" onclick="filterColleges('hospitality')">Hospitality & Service</button>
+      <button data-cat="aviation" onclick="filterColleges('aviation')">Aviation & Others</button>
+    </div>
+
+    <div class="college-section" data-category="computer">
+      <h3 class="college-group-title">💻 Computer & IT</h3>
+      <div class="college-grid">
+        <a href="https://www.niit.com" target="_blank" class="college-card">
+          <div class="college-box"><h3>🎯 NIIT</h3><p>IT & software training, career programs.</p></div>
+        </a>
+        <a href="https://www.apnacollege.in" target="_blank" class="college-card">
+          <div class="college-box"><h3>💻 Apna College</h3><p>Short-term IT courses & placement help.</p></div>
+        </a>
+        <a href="https://www.arena-multimedia.com" target="_blank" class="college-card">
+          <div class="college-box"><h3>🌐 Arena Animation</h3><p>Animation, VFX, web & multimedia design.</p></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="college-section" data-category="technical">
+      <h3 class="college-group-title">🔧 Technical & Vocational</h3>
+      <div class="college-grid">
+        <a href="https://www.ncvtmis.gov.in" target="_blank" class="college-card">
+          <div class="college-box"><h3>⚙️ ITI Official</h3><p>Government-run Industrial Training Institutes (ITI).</p></div>
+        </a>
+        <a href="https://www.marutisuzukitrainingacademy.com" target="_blank" class="college-card">
+          <div class="college-box"><h3>🚗 Maruti Suzuki Training</h3><p>Automotive & technician apprenticeships.</p></div>
+        </a>
+        <a href="https://www.nsdcindia.org" target="_blank" class="college-card">
+          <div class="college-box"><h3>🛠️ NSDC Skill Training</h3><p>Skill development programs across trades.</p></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="college-section" data-category="creative">
+      <h3 class="college-group-title">🎨 Creative & Design</h3>
+      <div class="college-grid">
+        <a href="https://www.nift.ac.in" target="_blank" class="college-card">
+          <div class="college-box"><h3>🎨 NIFT</h3><p>Fashion & design education (National Institute of Fashion Technology).</p></div>
+        </a>
+        <a href="https://www.jdinstitute.edu.in" target="_blank" class="college-card">
+          <div class="college-box"><h3>🏠 JD Institute</h3><p>Design, fashion & creative arts courses.</p></div>
+        </a>
+        <a href="https://www.maacindia.com" target="_blank" class="college-card">
+          <div class="college-box"><h3>🎬 MAAC</h3><p>Animation, VFX, and film-making training.</p></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="college-section" data-category="hospitality">
+      <h3 class="college-group-title">🍳 Hospitality & Service</h3>
+      <div class="college-grid">
+        <a href="https://ihmnewdelhi.com" target="_blank" class="college-card">
+          <div class="college-box"><h3>🏨 IHM Delhi</h3><p>Top hospitality & hotel management institute.</p></div>
+        </a>
+        <a href="https://www.lavonne.in" target="_blank" class="college-card">
+          <div class="college-box"><h3>🥐 Lavonne Academy</h3><p>Baking, patisserie & culinary arts training.</p></div>
+        </a>
+        <a href="https://www.ihmchennai.org" target="_blank" class="college-card">
+          <div class="college-box"><h3>🍽️ IHM Chennai</h3><p>Hospitality & service industry programs.</p></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="college-section" data-category="aviation">
+      <h3 class="college-group-title">✈️ Aviation & Others</h3>
+      <div class="college-grid">
+        <a href="https://www.frankfinn.com" target="_blank" class="college-card">
+          <div class="college-box"><h3>🛫 Frankfinn Institute</h3><p>Airport ground staff, cabin crew & hospitality.</p></div>
+        </a>
+        <a href="https://www.britishcouncil.in" target="_blank" class="college-card">
+          <div class="college-box"><h3>🗣️ British Council</h3><p>English language training & exam prep.</p></div>
+        </a>
+        <a href="https://www.indianairforce.nic.in" target="_blank" class="college-card">
+          <div class="college-box"><h3>✈️ Aero/Defense Training</h3><p>Entry-level aviation & defense prep.</p></div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-contact">
+      <h2>Contact Us</h2>
+      <p>If you have any queries, feel free to reach out to us.</p>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 DYF - Make You Better. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // filter and active button handling
+    function filterColleges(category) {
+      document.querySelectorAll('.college-section').forEach(section => {
+        section.style.display = (category === 'all' || section.dataset.category === category) ? 'block' : 'none';
+      });
+      // set active class on buttons
+      document.querySelectorAll('.filter-buttons button').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-cat') === category);
+      });
+    }
+
+    // initialize default view
+    document.addEventListener('DOMContentLoaded', function() {
+      filterColleges('all');
+    });
+  </script>
+</body>
+</html>

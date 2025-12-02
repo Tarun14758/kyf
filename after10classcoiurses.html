@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses After Class 10 - DYF</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', sans-serif; background: #f4f9fb; color: #333; }
+
+    header {
+      background: #0d1b2a;
+      color: #fff;
+      padding: 36px 20px;
+      text-align: center;
+    }
+    .logo { width: 92px; display: block; margin: 0 auto 10px; }
+
+    h1 { font-size: 2.2rem; font-weight: 800; color: #ffcc70; margin-bottom: 6px; }
+
+    nav ul { list-style: none; padding-top: 10px; margin: 0; }
+    nav ul li { display: inline-block; margin: 0 12px; }
+    nav ul li a { color: #80deea; font-weight: 600; text-decoration: none; font-size: 1rem; transition: color 0.25s ease; }
+    nav ul li a:hover { color: #ffd166; }
+
+    main { max-width: 1100px; margin: 36px auto; padding: 0 20px; }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 28px 22px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      text-align: center;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,0.08); }
+
+    .icon {
+      width: 56px;
+      height: 56px;
+      display: inline-block;
+      margin-bottom: 10px;
+      vertical-align: middle;
+    }
+
+    .card h2 { font-size: 1.35rem; color: #0d1b2a; margin: 8px 0 14px; }
+    .card img.photo {
+      width: 100%;
+      max-width: 900px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 10px auto 16px;
+      box-shadow: 0 8px 22px rgba(3,46,60,0.06);
+    }
+
+    .card ul { text-align: left; margin: 0 auto; max-width: 760px; padding-left: 18px; color: #444; line-height: 1.6; }
+    .card li { margin-bottom: 8px; }
+
+    /* centered button container */
+    .center-row { text-align: center; margin: 36px 0 56px; }
+
+    .big-button {
+      display: inline-block;
+      background-color: #007c91;
+      color: #fff;
+      padding: 12px 28px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background-color .18s ease, transform .12s ease;
+      box-shadow: 0 8px 18px rgba(3,46,60,0.08);
+    }
+    .big-button:hover { background-color: #005f6a; transform: translateY(-3px); }
+
+    footer {
+      background: #0d1b2a;
+      color: #ccc;
+      text-align: center;
+      padding: 22px 12px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 880px) {
+      .card img.photo { height: 180px; }
+      .card { padding: 22px; }
+    }
+    @media (max-width: 520px) {
+      nav ul li { display: block; margin: 8px 0; }
+      .card img.photo { height: 150px; }
+      h1 { font-size: 1.6rem; }
+      .icon { width: 48px; height: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="DYF Logo" class="logo" />
+    <h1>Courses After Class 10</h1>
+    <nav>
+      <ul>
+        <li><a href="HOMEPAGE.html">Home</a></li>
+        <li><a href="10classjobs.html">Jobs</a></li>
+        <li><a href="CONTACTPAGEFORALL.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Technical -->
+    <article class="card" id="technical">
+      <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" alt="Technical Icon" class="icon" />
+      <h2>Technical & Skill-Based Courses</h2>
+      <!-- photo: Unsplash query-based source (loads a relevant photo) -->
+      <img class="photo" src="https://source.unsplash.com/1000x600/?technical,workshop,training" alt="Technical training photo">
+      <ul>
+        <li>ITI courses – Electrician, Fitter, Welder, Mechanic, Turner, Refrigeration & AC Technician</li>
+        <li>Diploma in Computer Applications (DCA)</li>
+        <li>Basic Coding / Web Development</li>
+        <li>App Development (Android / iOS)</li>
+        <li>Data Entry & Office Automation</li>
+      </ul>
+    </article>
+
+    <!-- Creative -->
+    <article class="card" id="creative">
+      <img src="https://cdn-icons-png.flaticon.com/512/2920/2920107.png" alt="Design Icon" class="icon" />
+      <h2>Creative & Design Courses</h2>
+      <img class="photo" src="https://source.unsplash.com/1000x600/?graphic,designer,design" alt="Creative design photo">
+      <ul>
+        <li>Graphic Designing (Photoshop, Illustrator, CorelDRAW)</li>
+        <li>Video Editing & Animation</li>
+        <li>Photography</li>
+        <li>Fashion Designing (Certificate Level)</li>
+        <li>Interior Designing Basics</li>
+      </ul>
+    </article>
+
+    <!-- Medical -->
+    <article class="card" id="medical">
+      <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Medical Icon" class="icon" />
+      <h2>Healthcare & Paramedical</h2>
+      <img class="photo" src="https://source.unsplash.com/1000x600/?medical,lab,technician" alt="Medical training photo">
+      <ul>
+        <li>Diploma in Medical Lab Technician (DMLT)</li>
+        <li>Diploma in X-ray Technology</li>
+        <li>Nursing Assistant</li>
+        <li>Emergency Medical Technician (EMT)</li>
+        <li>Pharmacy Assistant</li>
+      </ul>
+    </article>
+
+    <!-- Business -->
+    <article class="card" id="business">
+      <img src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png" alt="Business Icon" class="icon" />
+      <h2>Business & Commerce Skills</h2>
+      <img class="photo" src="https://source.unsplash.com/1000x600/?digital,marketing,office,team" alt="Business skills photo">
+      <ul>
+        <li>Tally ERP 9 / Accounting Software</li>
+        <li>Digital Marketing</li>
+        <li>E-commerce Management</li>
+        <li>Retail Management</li>
+        <li>Entrepreneurship Skills</li>
+      </ul>
+    </article>
+
+    <!-- Hospitality -->
+    <article class="card" id="hospitality">
+      <img src="https://cdn-icons-png.flaticon.com/512/3176/3176361.png" alt="Hospitality Icon" class="icon" />
+      <h2>Hospitality & Service Industry</h2>
+      <img class="photo" src="https://source.unsplash.com/1000x600/?hotel,receptionist,hotelier" alt="Hospitality photo">
+      <ul>
+        <li>Hotel Management (Certificate / Diploma)</li>
+        <li>Bakery & Confectionery</li>
+        <li>Food Production</li>
+        <li>Housekeeping</li>
+        <li>Front Office Operations</li>
+      </ul>
+    </article>
+
+    <!-- Language -->
+    <article class="card" id="language">
+      <img src="https://cdn-icons-png.flaticon.com/512/3659/3659891.png" alt="Language Icon" class="icon" />
+      <h2>Language & Communication</h2>
+      <img class="photo" src="https://source.unsplash.com/1000x600/?language,learning,classroom" alt="Language learning photo">
+      <ul>
+        <li>Spoken English</li>
+        <li>Foreign Language Basics (French, German, Japanese)</li>
+        <li>Public Speaking & Communication Skills</li>
+      </ul>
+    </article>
+
+    <!-- centered salary button -->
+    <div class="center-row">
+      <a href="10aftercoursesalarhy.html" class="big-button" role="button" aria-label="Find your salary">Find Your Salary Here</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DYF - Make You Better. All rights reserved.</p>
+  </footer>
+</body>
+</html>

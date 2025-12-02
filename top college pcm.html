@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top Colleges - PCM Fields</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f9fb;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background: #0d1b2a;
+      color: #fff;
+      width: 100%;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .logo-img {
+      width: 100px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+      animation: bounce 0.7s infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-5px); }
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #80deea;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffd166;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    h2.section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #007c91;
+      margin-bottom: 30px;
+    }
+
+    .college-section {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .college-group-title {
+      font-size: 1.8rem;
+      color: #007c91;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+
+    .college-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .college-card {
+      text-decoration: none;
+    }
+
+    .college-box {
+      background: linear-gradient(145deg, #ffffff, #e6f7ff);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: 0.3s ease-in-out;
+      text-align: center;
+      border: 2px solid #b2ebf2;
+    }
+
+    .college-box:hover {
+      background: linear-gradient(145deg, #e0f7fa, #ffffff);
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .college-box h3 {
+      color: #0d1b2a;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    .college-box p {
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .filter-buttons button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      background-color: #007c91;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .filter-buttons button:hover {
+      background-color: #005f6b;
+    }
+
+    footer {
+      background: #0d1b2a;
+      color: #fff;
+      width: 100%;
+      padding: 30px 20px 15px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .footer-contact h2 {
+      font-size: 1.4rem;
+      color: #ffcc70;
+      margin-bottom: 8px;
+    }
+
+    .footer-contact p {
+      font-size: 1rem;
+      color: #cce7ff;
+      margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+      font-size: 0.9rem;
+      color: #cccccc;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Logo" class="logo-img" />
+    <h1 style="font-size: 2.5rem; font-weight: 800; color: #ffcc70;">Top Colleges - PCM</h1>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="pcmpage.html">Back to PCM</a></li>
+        <li><a href="CONTACTPAGEFORALL.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="section-title">Discover the Best Government & Private Colleges 🎓</h2>
+
+    <div class="filter-buttons">
+      <button onclick="filterColleges('all')">All</button>
+      <button onclick="filterColleges('engineering')">Engineering</button>
+      <button onclick="filterColleges('defense')">Govt & Defense</button>
+      <button onclick="filterColleges('science')">Science & Research</button>
+    </div>
+
+    <!-- Engineering Section -->
+    <div class="college-section" data-category="engineering">
+      <h3 class="college-group-title">🚀 Engineering Colleges</h3>
+      <div class="college-grid">
+        <a href="https://www.iitb.ac.in/" target="_blank" class="college-card"><div class="college-box"><h3>🎓 IIT Bombay</h3><p>Government College</p></div></a>
+        <a href="https://www.bits-pilani.ac.in/" target="_blank" class="college-card"><div class="college-box"><h3>🏫 BITS Pilani</h3><p>Private College</p></div></a>
+        <a href="https://www.nitk.ac.in/" target="_blank" class="college-card"><div class="college-box"><h3>🏛 NIT Karnataka</h3><p>Government College</p></div></a>
+        <a href="https://www.vit.ac.in/" target="_blank" class="college-card"><div class="college-box"><h3>🏢 VIT Vellore</h3><p>Private College</p></div></a>
+        <a href="https://www.manipal.edu/" target="_blank" class="college-card"><div class="college-box"><h3>🏫 Manipal Institute of Technology</h3><p>Private College</p></div></a>
+        <a href="https://www.amrita.edu/" target="_blank" class="college-card"><div class="college-box"><h3>🏢 Amrita School of Engineering</h3><p>Private College</p></div></a>
+      </div>
+    </div>
+
+    <!-- Defense Section -->
+    <div class="college-section" data-category="defense">
+      <h3 class="college-group-title">🎯 Government & Defense Colleges</h3>
+      <div class="college-grid">
+        <a href="https://nda.nic.in/" target="_blank" class="college-card"><div class="college-box"><h3>🪖 National Defence Academy</h3><p>Government College</p></div></a>
+        <a href="https://www.ssvpv.ac.in/" target="_blank" class="college-card"><div class="college-box"><h3>🏛 SVPNPA Hyderabad</h3><p>Government College</p></div></a>
+        <a href="https://www.irse.gov.in/" target="_blank" class="college-card"><div class="college-box"><h3>🚆 Indian Railway Institute</h3><p>Government College</p></div></a>
+        <a href="https://www.iist.ac.in/" target="_blank" class="college-card"><div class="college-box"><h3>🛰 IIST for ISRO Aspirants</h3><p>Government College</p></div></a>
+        <a href="https://afcat.cdac.in/" target="_blank" class="college-card"><div class="college-box"><h3>✈️ Indian Air Force Academy</h3><p>Government College</p></div></a>
+        <a href="https://www.joinindiannavy.gov.in/" target="_blank" class="college-card"><div class="college-box"><h3>⚓ Indian Naval Academy</h3><p>Government College</p></div></a>
+      </div>
+    </div>
+
+    <!-- Science Section -->
+    <div class="college-section" data-category="science">
+      <h3 class="college-group-title">🔬 Science & Research Colleges</h3>
+      <div class="college-grid">
+        <a href="https://www.iisc.ac.in/" target="_blank" class="college-card"><div class="college-box"><h3>🔬 Indian Institute of Science (IISc)</h3><p>Government College</p></div></a>
+        <a href="https://www.tifr.res.in/" target="_blank" class="college-card"><div class="college-box"><h3>🔭 Tata Institute of Fundamental Research</h3><p>Government Research Institute</p></div></a>
+        <a href="https://www.jnu.ac.in/" target="_blank" class="college-card"><div class="college-box"><h3>🧪 JNU - School of Environmental Sciences</h3><p>Government University</p></div></a>
+        <a href="https://www.iuac.res.in/" target="_blank" class="college-card"><div class="college-box"><h3>🌍 Inter-University Accelerator Centre (IUAC)</h3><p>Government Research Centre</p></div></a>
+        <a href="https://www.ncbs.res.in/" target="_blank" class="college-card"><div class="college-box"><h3>🧬 NCBS - Bengaluru</h3><p>Government Research Institute</p></div></a>
+        <a href="https://www.iiserpune.ac.in/" target="_blank" class="college-card"><div class="college-box"><h3>🧫 IISER Pune</h3><p>Government Research Institute</p></div></a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-contact">
+      <h2>Contact Us</h2>
+      <p>If you have any queries, feel free to reach out to us.</p>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Student Resource Hub. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    function filterColleges(category) {
+      document.querySelectorAll('.college-section').forEach(section => {
+        if (category === 'all' || section.dataset.category === category) {
+          section.style.display = 'block';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

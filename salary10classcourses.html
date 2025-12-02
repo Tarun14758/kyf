@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salary Overview - Courses After Class 10</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f9fb;
+      color: #333;
+    }
+    header {
+      background: #0d1b2a;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .logo {
+      width: 100px;
+      display: block;
+      margin: 0 auto 10px;
+      animation: bounce 1s infinite alternate;
+    }
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-5px); }
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #ffcc70;
+      margin-bottom: 10px;
+    }
+    nav ul {
+      list-style: none;
+      padding-top: 10px;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #80deea;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #ffd166;
+    }
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .career-salary-card {
+      background: linear-gradient(145deg, #ffffff, #e6f7ff);
+      border: 2px solid #b2ebf2;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease-in-out;
+    }
+    .career-salary-card:hover {
+      transform: translateY(-5px);
+      background: linear-gradient(145deg, #e0f7fa, #ffffff);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    .career-salary-card h2 {
+      font-size: 1.7rem;
+      color: #007c91;
+      margin-bottom: 15px;
+    }
+    .salary-table p {
+      margin: 10px 0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .salary-table span {
+      font-weight: 600;
+      display: inline-block;
+      width: 180px;
+      color: #0d1b2a;
+    }
+    .button-box {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .big-button {
+      background-color: #007c91;
+      color: #fff;
+      padding: 14px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      transition: background-color 0.3s, transform 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .big-button:hover {
+      background-color: #005f6a;
+      transform: translateY(-3px);
+    }
+    footer {
+      background: #0d1b2a;
+      color: #aaa;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+      .salary-table span {
+        display: block;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="DYF Logo" class="logo" />
+    <h1>Salary Overview - Courses After Class 10 💰</h1>
+    <nav>
+      <ul>
+        <li><a href="HOMEPAGE.html">Home</a></li>
+        <li><a href="10 class page.html">Jobs</a></li>
+        <li><a href="CONTACTPAGEFORALL.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="career-salary-card">
+      <h2>💻 Basic Computer Course (BCC)</h2>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹8,000 - ₹15,000</p>
+        <p><span>After 5 Years:</span> ₹20,000 - ₹30,000</p>
+        <p><span>After 10 Years:</span> ₹35,000 - ₹50,000</p>
+        <p><span>After 20 Years:</span> ₹60,000+</p>
+      </div>
+    </div>
+
+    <div class="career-salary-card">
+      <h2>📊 Diploma in Computer Applications (DCA)</h2>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹10,000 - ₹18,000</p>
+        <p><span>After 5 Years:</span> ₹25,000 - ₹35,000</p>
+        <p><span>After 10 Years:</span> ₹40,000 - ₹60,000</p>
+        <p><span>After 20 Years:</span> ₹80,000+</p>
+      </div>
+    </div>
+
+    <div class="career-salary-card">
+      <h2>💰 Tally & Accounting Software</h2>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹12,000 - ₹20,000</p>
+        <p><span>After 5 Years:</span> ₹25,000 - ₹40,000</p>
+        <p><span>After 10 Years:</span> ₹50,000 - ₹70,000</p>
+        <p><span>After 20 Years:</span> ₹1 Lakh+</p>
+      </div>
+    </div>
+
+    <div class="career-salary-card">
+      <h2>🌐 Web Designing & Development</h2>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹15,000 - ₹25,000</p>
+        <p><span>After 5 Years:</span> ₹35,000 - ₹60,000</p>
+        <p><span>After 10 Years:</span> ₹70,000 - ₹1 Lakh</p>
+        <p><span>After 20 Years:</span> ₹1.5 Lakh+</p>
+      </div>
+    </div>
+
+    <div class="career-salary-card">
+      <h2>🛡️ Cyber Security Basics</h2>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹18,000 - ₹30,000</p>
+        <p><span>After 5 Years:</span> ₹40,000 - ₹70,000</p>
+        <p><span>After 10 Years:</span> ₹90,000 - ₹1.5 Lakh</p>
+        <p><span>After 20 Years:</span> ₹2 Lakh+</p>
+      </div>
+    </div>
+
+    <div class="button-box">
+      <a href="10 class page.html" class="big-button">🔙 Back to Jobs</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DYF - Make You Better. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salary Details - DYF</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f9fb;
+      color: #333;
+    }
+
+    header {
+      background: #0d1b2a;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeInDown 1s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      width: 100px;
+      display: block;
+      margin: 0 auto 10px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-5px); }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #ffcc70;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding-top: 10px;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #80deea;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffd166;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    section h2 {
+      font-size: 1.7rem;
+      color: #007c91;
+      margin-bottom: 15px;
+    }
+
+    section ul {
+      padding-left: 20px;
+      line-height: 1.7;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .salary-table {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      background: #f0f9ff;
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+
+    .salary-table span {
+      display: inline-block;
+      width: 150px;
+      font-weight: 600;
+    }
+
+    .button-box {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .big-button {
+      background-color: #007c91;
+      color: #fff;
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      transition: background-color 0.3s, transform 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .big-button:hover {
+      background-color: #005f6a;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      background: #0d1b2a;
+      color: #aaa;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .salary-table span {
+        display: block;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="DYF Logo" class="logo" />
+    <h1>Salary Overview - After Class 10</h1>
+    <nav>
+      <ul>
+        <li><a href="HOMEPAGE.html">Home</a></li>
+        <li><a href="10 class page.html">10 Class</a></li>
+        <li><a href="CONTACTPAGEFORALL.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>🏛️ Government Jobs</h2>
+      <ul>
+        <li>Soldier, Constable, Postman, SSC MTS</li>
+      </ul>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹18,000 - ₹25,000</p>
+        <p><span>After 5 Years:</span> ₹35,000 - ₹45,000 (promotion to senior level)</p>
+        <p><span>After 10 Years:</span> ₹50,000 - ₹60,000</p>
+        <p><span>After 20 Years:</span> ₹70,000+ with pension benefits 🪙</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>💼 Private Sector</h2>
+      <ul>
+        <li>Call Center, Data Entry, Delivery, Sales</li>
+      </ul>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹10,000 - ₹18,000</p>
+        <p><span>After 5 Years:</span> ₹20,000 - ₹30,000</p>
+        <p><span>After 10 Years:</span> ₹35,000+ (manager roles possible)</p>
+        <p><span>After 20 Years:</span> ₹50,000+ in leadership roles</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🛠️ Skilled & Vocational</h2>
+      <ul>
+        <li>Mechanic, Electrician, Tailor, Designer</li>
+      </ul>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹8,000 - ₹15,000</p>
+        <p><span>After 5 Years:</span> ₹20,000 - ₹25,000</p>
+        <p><span>After 10 Years:</span> ₹30,000+ (with experience & reputation)</p>
+        <p><span>After 20 Years:</span> ₹40,000+ (own shop or brand)</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🌐 Freelance & Online</h2>
+      <ul>
+        <li>YouTuber, Writer, Coder, Affiliate Marketer</li>
+      </ul>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹5,000 - ₹20,000 (based on skills)</p>
+        <p><span>After 5 Years:</span> ₹30,000 - ₹60,000 (if consistent)</p>
+        <p><span>After 10 Years:</span> ₹1,00,000+ possible (influencer, brand)</p>
+        <p><span>After 20 Years:</span> Unlimited 💸 (if established)</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🚀 Entrepreneurship</h2>
+      <ul>
+        <li>Retail Shop, Catering, Handmade Goods</li>
+      </ul>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹5,000 - ₹25,000 (profit-based)</p>
+        <p><span>After 5 Years:</span> ₹40,000+ (scaling up)</p>
+        <p><span>After 10 Years:</span> ₹80,000+ (if successful)</p>
+        <p><span>After 20 Years:</span> ₹1 Lakh+ 💼 (own brand/franchise)</p>
+      </div>
+    </section>
+
+    <div class="button-box">
+      <a href="10 class page.html"class="big-button">🔙 Back to Job Options</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DYF - Make You Better. All rights reserved.</p>
+  </footer>
+</body>
+</html>

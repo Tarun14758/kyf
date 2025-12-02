@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - DYF</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f9fb; /* Match home page background */
+      color: #333;
+    }
+
+    header {
+      background: #0d1b2a;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeInDown 1s ease;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+      animation: bounce 0.7s infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-5px); }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #ffcc70; /* Match home page heading color */
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 10px 0 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #80deea; /* Match home page link color */
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffd166; /* Match home page hover color */
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #ffffff; /* Match home page section background */
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #007c91; /* Match home page section heading color */
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .contact-info {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+      text-align: center; /* Center align contact info */
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background-color: #f9f9f9; /* Match home page input background */
+      border: 1px solid #ccc; /* Add border for better visibility */
+      border-radius: 5px;
+      color: #333; /* Match text color */
+    }
+
+    .big-button {
+      display: inline-block;
+      background-color: #007c91;
+      color: #fff;
+      padding: 14px 32px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      margin-top: 25px;
+      transition: background-color 0.3s, transform 0.2s;
+      text-decoration: none;
+    }
+
+    .big-button:hover {
+      background-color: #005f6a;
+      transform: translateY(-3px);
+    }
+
+    form button:hover {
+      background-color: #005f6a; /* Match home page button hover color */
+      transform: translateY(-3px);
+    }
+
+    footer {
+      background: #0d1b2a; /* Match home page footer */
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="DYF Logo" class="logo">
+    <h1>Contact Us</h1>
+    <nav>
+      <ul>
+        <li><a href="HOMEPAGE.html">Home</a></li>
+        <li><a href="HOMEPAGE.html#streams">Streams</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>We'd love to hear from you</h2>
+    <div class="contact-info">
+      <p><strong>Email:</strong> tarunbijarnia2023@gmail.com</p>
+      <p><strong>Phone:</strong> +1 234 567 890</p>
+      <p><strong>Address:</strong> 123 DYF Street, Jaipur, India</p>
+    </div>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="big-button">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DYF - Make You Better. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

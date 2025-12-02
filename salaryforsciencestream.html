@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salary Overview - PCM Stream</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f9fb;
+      color: #333;
+    }
+
+    header {
+      background: #0d1b2a;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 100px;
+      display: block;
+      margin: 0 auto 10px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-5px); }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #ffcc70;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding-top: 10px;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #80deea;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffd166;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .career-salary-card {
+      background: linear-gradient(145deg, #ffffff, #e6f7ff);
+      border: 2px solid #b2ebf2;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .career-salary-card:hover {
+      transform: translateY(-5px);
+      background: linear-gradient(145deg, #e0f7fa, #ffffff);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .career-salary-card h2 {
+      font-size: 1.7rem;
+      color: #007c91;
+      margin-bottom: 15px;
+    }
+
+    .salary-table p {
+      margin: 10px 0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .salary-table span {
+      font-weight: 600;
+      display: inline-block;
+      width: 180px;
+      color: #0d1b2a;
+    }
+
+    .button-box {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .big-button {
+      background-color: #007c91;
+      color: #fff;
+      padding: 14px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      transition: background-color 0.3s, transform 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .big-button:hover {
+      background-color: #005f6a;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      background: #0d1b2a;
+      color: #aaa;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .salary-table span {
+        display: block;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="DYF Logo" class="logo" />
+    <h1>Salary Overview - PCM Career Paths 💼</h1>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="pcmpage.html">Back to PCM</a></li>
+        <li><a href="CONTACTPAGEFORALL.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="career-salary-card">
+      <h2>💻 Software / IT / Cybersecurity</h2>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹25,000 - ₹45,000 👨‍💻</p>
+        <p><span>After 5 Years:</span> ₹60,000 - ₹90,000 🧑‍💼</p>
+        <p><span>After 10 Years:</span> ₹1.2 - ₹1.5 Lakh 🚀</p>
+        <p><span>After 20 Years:</span> ₹3 Lakh+ 🏢</p>
+      </div>
+    </div>
+
+    <div class="career-salary-card">
+      <h2>⚙️ Engineering (Mech, Civil, Elec, Aero)</h2>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹20,000 - ₹35,000 👷</p>
+        <p><span>After 5 Years:</span> ₹45,000 - ₹65,000 🏗️</p>
+        <p><span>After 10 Years:</span> ₹80,000 - ₹1.2 Lakh 💼</p>
+        <p><span>After 20 Years:</span> ₹2 Lakh+ 🏢</p>
+      </div>
+    </div>
+
+    <div class="career-salary-card">
+      <h2>🎖️ Government & Defense (ISRO, NDA, etc.)</h2>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹35,000 - ₹55,000 🪖</p>
+        <p><span>After 5 Years:</span> ₹65,000 - ₹80,000 🏅</p>
+        <p><span>After 10 Years:</span> ₹1 Lakh - ₹1.3 Lakh 🧑‍✈️</p>
+        <p><span>After 20 Years:</span> ₹2 Lakh+ ⭐</p>
+      </div>
+    </div>
+
+    <div class="career-salary-card">
+      <h2>🔬 Scientist / Research</h2>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹30,000 - ₹50,000 🧪</p>
+        <p><span>After 5 Years:</span> ₹65,000 - ₹90,000 🧠</p>
+        <p><span>After 10 Years:</span> ₹1.2 Lakh - ₹1.5 Lakh 🧬</p>
+        <p><span>After 20 Years:</span> ₹2.5 Lakh+ 🛰️</p>
+      </div>
+    </div>
+
+    <div class="career-salary-card">
+      <h2>✈️ Aviation (Pilot / Air Force)</h2>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹50,000 - ₹1 Lakh 🛫</p>
+        <p><span>After 5 Years:</span> ₹1.2 - ₹1.8 Lakh 👨‍✈️</p>
+        <p><span>After 10 Years:</span> ₹2.5 Lakh - ₹3 Lakh ✈️</p>
+        <p><span>After 20 Years:</span> ₹4 Lakh+ 🌍</p>
+      </div>
+    </div>
+
+    <div class="career-salary-card">
+      <h2>📈 Business & Finance / Startups</h2>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹15,000 - ₹40,000 💼</p>
+        <p><span>After 5 Years:</span> ₹50,000 - ₹1 Lakh 📊</p>
+        <p><span>After 10 Years:</span> ₹1.5 Lakh+ 🚀</p>
+        <p><span>After 20 Years:</span> ₹3 Lakh+ 🏢</p>
+      </div>
+    </div>
+
+    <div class="career-salary-card">
+      <h2>🎮 Creative Tech (Game Dev, Design)</h2>
+      <div class="salary-table">
+        <p><span>1st Month:</span> ₹20,000 - ₹40,000 🎨</p>
+        <p><span>After 5 Years:</span> ₹50,000 - ₹80,000 🎮</p>
+        <p><span>After 10 Years:</span> ₹1.2 Lakh+ 🧑‍🎨</p>
+        <p><span>After 20 Years:</span> ₹2 Lakh+ 🌟</p>
+      </div>
+    </div>
+
+    <div class="button-box">
+      <a href="PCM_CAREERS.html" class="big-button">🔙 Back to PCM Career Options</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DYF - Make You Better. All rights reserved.</p>
+  </footer>
+</body>
+</html>

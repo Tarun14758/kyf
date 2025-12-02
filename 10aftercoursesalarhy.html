@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Estimated Salaries – Courses After Class 10 | DYF</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --brand:#007c91;
+      --dark:#0d1b2a;
+      --muted:#6b7280;
+      --card-shadow: 0 10px 25px rgba(3,46,60,0.06);
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:"Poppins",sans-serif;
+      margin:0;
+      background:#f4f9fb;
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+    }
+    header{
+      background:var(--dark);
+      color:#fff;
+      padding:28px 18px;
+      text-align:center;
+    }
+    .logo{width:84px;display:block;margin:0 auto 10px}
+    h1{font-size:1.6rem;color:#ffcc70;margin:0 0 6px}
+    .subtitle{color:#bcdde2;margin-top:6px;font-size:0.95rem}
+
+    main{max-width:1100px;margin:28px auto;padding:20px}
+
+    .grid{display:grid;grid-template-columns:1fr 380px;gap:20px}
+    @media (max-width:980px){.grid{grid-template-columns:1fr}}
+
+    .panel{
+      background:#fff;border-radius:12px;padding:18px;box-shadow:var(--card-shadow);
+    }
+
+    .category{
+      margin-bottom:12px;
+    }
+    .category h2{
+      font-size:1.05rem;color:var(--dark);margin:6px 0 12px;display:flex;align-items:center;gap:10px;
+    }
+    .btn-row{display:flex;flex-wrap:wrap;gap:10px}
+    .role-btn{
+      background:#eef7f8;border:1px solid #e2f0f1;color:var(--dark);
+      padding:8px 12px;border-radius:999px;cursor:pointer;font-weight:600;
+      transition:transform .12s ease,box-shadow .12s ease;
+    }
+    .role-btn:hover{transform:translateY(-3px);box-shadow:0 6px 16px rgba(3,46,60,0.06)}
+    .role-btn.active{background:var(--brand);color:#fff;box-shadow:0 10px 24px rgba(3,46,60,0.08)}
+
+    /* right column salary card */
+    .salary-card{
+      display:flex;flex-direction:column;gap:12px;align-items:flex-start;
+    }
+    .salary-card .empty{
+      color:var(--muted);font-size:0.95rem;
+    }
+    .salary-box{
+      width:100%;background:linear-gradient(180deg,#ffffff,#fbffff);
+      border-radius:10px;padding:14px;border:1px solid #e6f2f3;
+      box-shadow:0 8px 22px rgba(3,46,60,0.04);
+    }
+    .role-title{font-size:1.05rem;font-weight:700;color:var(--dark);margin-bottom:8px}
+    .ranges{display:flex;gap:8px;flex-wrap:wrap}
+    .range{
+      flex:1 1 45%;background:#f8fffe;border-radius:8px;padding:10px;border:1px solid #e7f6f6;
+      min-width:160px;
+    }
+    .range strong{display:block;font-weight:700;color:var(--brand);margin-bottom:6px}
+    .note{font-size:0.9rem;color:var(--muted);margin-top:8px}
+
+    /* footer */
+    footer{text-align:center;padding:18px 12px;color:#6b7280;font-size:0.9rem;margin-top:18px}
+
+    /* small screens */
+    @media (max-width:520px){
+      .range{flex:1 1 100%}
+      h1{font-size:1.3rem}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="DYF logo">
+    <h1>Estimated Salaries — Courses After Class 10</h1>
+    <div class="subtitle">Click any role to see approximate salary ranges (India). Values are illustrative & may vary by city, skill, and demand.</div>
+  </header>
+
+  <main>
+    <div class="grid">
+      <!-- left: options -->
+      <div>
+        <div class="panel">
+          <!-- Technical -->
+          <div class="category">
+            <h2>🔧 Technical & Skill-Based</h2>
+            <div class="btn-row" id="tech-btns">
+              <button class="role-btn" data-key="electrician">Electrician</button>
+              <button class="role-btn" data-key="mechanic">Mechanic (Auto)</button>
+              <button class="role-btn" data-key="refrigeration">Refrigeration Technician</button>
+              <button class="role-btn" data-key="dca">DCA / Data Entry</button>
+              <button class="role-btn" data-key="webdev">Basic Web Developer</button>
+              <button class="role-btn" data-key="appdev">App Developer</button>
+            </div>
+          </div>
+
+          <!-- Creative -->
+          <div class="category">
+            <h2>🎨 Creative & Design</h2>
+            <div class="btn-row" id="creative-btns">
+              <button class="role-btn" data-key="graphic">Graphic Designer</button>
+              <button class="role-btn" data-key="video">Video Editor</button>
+              <button class="role-btn" data-key="photographer">Photographer</button>
+              <button class="role-btn" data-key="fashion">Fashion Designer (entry level)</button>
+            </div>
+          </div>
+
+          <!-- Healthcare -->
+          <div class="category">
+            <h2>🏥 Healthcare & Paramedical</h2>
+            <div class="btn-row" id="medical-btns">
+              <button class="role-btn" data-key="dmlt">Medical Lab Technician (DMLT)</button>
+              <button class="role-btn" data-key="xray">X-ray Technician</button>
+              <button class="role-btn" data-key="nursing">Nursing Assistant</button>
+              <button class="role-btn" data-key="emt">Emergency Medical Tech (EMT)</button>
+              <button class="role-btn" data-key="pharma">Pharmacy Assistant</button>
+            </div>
+          </div>
+
+          <!-- Business -->
+          <div class="category">
+            <h2>💼 Business & Commerce Skills</h2>
+            <div class="btn-row" id="business-btns">
+              <button class="role-btn" data-key="tally">Tally / Junior Accountant</button>
+              <button class="role-btn" data-key="digital">Digital Marketer</button>
+              <button class="role-btn" data-key="ecom">E-commerce Executive</button>
+              <button class="role-btn" data-key="retail">Retail Manager (entry)</button>
+            </div>
+          </div>
+
+          <!-- Hospitality -->
+          <div class="category">
+            <h2>🏨 Hospitality & Service</h2>
+            <div class="btn-row" id="hospitality-btns">
+              <button class="role-btn" data-key="reception">Hotel Receptionist</button>
+              <button class="role-btn" data-key="baker">Baker / Pastry</button>
+              <button class="role-btn" data-key="housekeeping">Housekeeping Staff</button>
+            </div>
+          </div>
+
+          <!-- Language -->
+          <div class="category">
+            <h2>🗣️ Language & Communication</h2>
+            <div class="btn-row" id="language-btns">
+              <button class="role-btn" data-key="spoken">Spoken English Trainer</button>
+              <button class="role-btn" data-key="translator">Translator / Interpreter</button>
+              <button class="role-btn" data-key="public">Public Speaking Coach</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- right: salary display -->
+      <aside class="panel salary-card" id="salaryPanel" aria-live="polite">
+        <div class="empty">
+          Click any role on the left to see typical salary ranges (approximate).
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    Values are approximate and depend on city, employer, skill level, certifications, and demand. Use these ranges as starting guidance only.
+  </footer>
+
+  <script>
+    // Salary data (approximate values in INR)
+    const SALARIES = {
+      // technical
+      electrician: {
+        title: "Electrician",
+        entry: { monthly: "8,000 - 15,000", yearly: "96,000 - 180,000" },
+        mid: { monthly: "15,000 - 35,000", yearly: "180,000 - 420,000" },
+        senior: { monthly: "30,000 - 60,000+", yearly: "360,000 - 720,000+" },
+        note: "Skilled electricians with certifications and experience or who run their own services can earn substantially more."
+      },
+      mechanic: {
+        title: "Mechanic (Auto)",
+        entry: { monthly: "10,000 - 18,000", yearly: "120,000 - 216,000" },
+        mid: { monthly: "18,000 - 35,000", yearly: "216,000 - 420,000" },
+        senior: { monthly: "30,000 - 70,000", yearly: "360,000 - 840,000" },
+        note: "Specialization (diesel, two-wheeler, diagnostic) raises demand and pay."
+      },
+      refrigeration: {
+        title: "Refrigeration & AC Technician",
+        entry: { monthly: "10,000 - 20,000", yearly: "120,000 - 240,000" },
+        mid: { monthly: "18,000 - 40,000", yearly: "216,000 - 480,000" },
+        senior: { monthly: "30,000 - 65,000", yearly: "360,000 - 780,000" },
+        note: "Emergency service and maintenance experts earn higher hourly rates."
+      },
+      dca: {
+        title: "DCA / Data Entry",
+        entry: { monthly: "8,000 - 16,000", yearly: "96,000 - 192,000" },
+        mid: { monthly: "15,000 - 28,000", yearly: "180,000 - 336,000" },
+        senior: { monthly: "25,000 - 45,000", yearly: "300,000 - 540,000" },
+        note: "Freelance data work can increase monthly income with volume."
+      },
+      webdev: {
+        title: "Basic Web Developer",
+        entry: { monthly: "15,000 - 30,000", yearly: "180,000 - 360,000" },
+        mid: { monthly: "30,000 - 70,000", yearly: "360,000 - 840,000" },
+        senior: { monthly: "60,000 - 150,000+", yearly: "720,000 - 1,800,000+" },
+        note: "Freelancers and remote developers can earn premium rates."
+      },
+      appdev: {
+        title: "App Developer",
+        entry: { monthly: "20,000 - 40,000", yearly: "240,000 - 480,000" },
+        mid: { monthly: "40,000 - 80,000", yearly: "480,000 - 960,000" },
+        senior: { monthly: "80,000 - 200,000+", yearly: "960,000 - 2,400,000+" },
+        note: "Strong portfolio and published apps increase earnings."
+      },
+
+      // creative
+      graphic: {
+        title: "Graphic Designer",
+        entry: { monthly: "12,000 - 25,000", yearly: "144,000 - 300,000" },
+        mid: { monthly: "25,000 - 50,000", yearly: "300,000 - 600,000" },
+        senior: { monthly: "50,000 - 120,000+", yearly: "600,000 - 1,440,000+" },
+        note: "Freelancers often charge per project; reputation matters."
+      },
+      video: {
+        title: "Video Editor",
+        entry: { monthly: "15,000 - 30,000", yearly: "180,000 - 360,000" },
+        mid: { monthly: "30,000 - 60,000", yearly: "360,000 - 720,000" },
+        senior: { monthly: "60,000 - 150,000+", yearly: "720,000 - 1,800,000+" },
+        note: "Niche skills (motion graphics, VFX) command higher rates."
+      },
+      photographer: {
+        title: "Photographer",
+        entry: { monthly: "10,000 - 25,000", yearly: "120,000 - 300,000" },
+        mid: { monthly: "25,000 - 55,000", yearly: "300,000 - 660,000" },
+        senior: { monthly: "50,000+", yearly: "600,000+" },
+        note: "Income is often project-based (weddings, events, brands)."
+      },
+      fashion: {
+        title: "Fashion Designer (entry level)",
+        entry: { monthly: "12,000 - 25,000", yearly: "144,000 - 300,000" },
+        mid: { monthly: "25,000 - 45,000", yearly: "300,000 - 540,000" },
+        senior: { monthly: "50,000+", yearly: "600,000+" },
+        note: "Working with brands or running a label increases earnings."
+      },
+
+      // medical
+      dmlt: {
+        title: "Medical Lab Technician (DMLT)",
+        entry: { monthly: "12,000 - 25,000", yearly: "144,000 - 300,000" },
+        mid: { monthly: "25,000 - 45,000", yearly: "300,000 - 540,000" },
+        senior: { monthly: "40,000 - 80,000", yearly: "480,000 - 960,000" },
+        note: "Hospital vs private lab affects pay scale."
+      },
+      xray: {
+        title: "X-ray Technician",
+        entry: { monthly: "11,000 - 22,000", yearly: "132,000 - 264,000" },
+        mid: { monthly: "22,000 - 40,000", yearly: "264,000 - 480,000" },
+        senior: { monthly: "40,000 - 75,000", yearly: "480,000 - 900,000" },
+        note: "Certification and speed improve employability."
+      },
+      nursing: {
+        title: "Nursing Assistant",
+        entry: { monthly: "12,000 - 20,000", yearly: "144,000 - 240,000" },
+        mid: { monthly: "20,000 - 35,000", yearly: "240,000 - 420,000" },
+        senior: { monthly: "35,000 - 60,000", yearly: "420,000 - 720,000" },
+        note: "Government hospitals often provide better job security."
+      },
+      emt: {
+        title: "Emergency Medical Technician (EMT)",
+        entry: { monthly: "15,000 - 28,000", yearly: "180,000 - 336,000" },
+        mid: { monthly: "28,000 - 45,000", yearly: "336,000 - 540,000" },
+        senior: { monthly: "45,000 - 90,000", yearly: "540,000 - 1,080,000" },
+        note: "Work in ambulance services, hospitals, or private firms."
+      },
+      pharma: {
+        title: "Pharmacy Assistant",
+        entry: { monthly: "10,000 - 20,000", yearly: "120,000 - 240,000" },
+        mid: { monthly: "20,000 - 35,000", yearly: "240,000 - 420,000" },
+        senior: { monthly: "35,000 - 60,000", yearly: "420,000 - 720,000" },
+        note: "Retail pharmacy vs hospital pharmacy differs in pay."
+      },
+
+      // business
+      tally: {
+        title: "Tally / Junior Accountant",
+        entry: { monthly: "10,000 - 20,000", yearly: "120,000 - 240,000" },
+        mid: { monthly: "20,000 - 40,000", yearly: "240,000 - 480,000" },
+        senior: { monthly: "40,000 - 90,000", yearly: "480,000 - 1,080,000" },
+        note: "Certification and bookkeeping experience increase value."
+      },
+      digital: {
+        title: "Digital Marketer",
+        entry: { monthly: "15,000 - 30,000", yearly: "180,000 - 360,000" },
+        mid: { monthly: "30,000 - 60,000", yearly: "360,000 - 720,000" },
+        senior: { monthly: "60,000 - 150,000+", yearly: "720,000 - 1,800,000+" },
+        note: "Performance-based roles (PPC, growth) can be lucrative."
+      },
+      ecom: {
+        title: "E-commerce Executive",
+        entry: { monthly: "18,000 - 35,000", yearly: "216,000 - 420,000" },
+        mid: { monthly: "35,000 - 70,000", yearly: "420,000 - 840,000" },
+        senior: { monthly: "60,000+", yearly: "720,000+" },
+        note: "Experience with marketplaces & logistics helps growth."
+      },
+      retail: {
+        title: "Retail Manager (entry)",
+        entry: { monthly: "12,000 - 25,000", yearly: "144,000 - 300,000" },
+        mid: { monthly: "25,000 - 50,000", yearly: "300,000 - 600,000" },
+        senior: { monthly: "50,000 - 120,000", yearly: "600,000 - 1,440,000" },
+        note: "Large chains pay better than small stores."
+      },
+
+      // hospitality
+      reception: {
+        title: "Hotel Receptionist",
+        entry: { monthly: "9,000 - 18,000", yearly: "108,000 - 216,000" },
+        mid: { monthly: "18,000 - 35,000", yearly: "216,000 - 420,000" },
+        senior: { monthly: "35,000 - 70,000", yearly: "420,000 - 840,000" },
+        note: "Luxury hotels and experienced staff earn more."
+      },
+      baker: {
+        title: "Baker / Pastry",
+        entry: { monthly: "9,000 - 18,000", yearly: "108,000 - 216,000" },
+        mid: { monthly: "18,000 - 35,000", yearly: "216,000 - 420,000" },
+        senior: { monthly: "35,000+", yearly: "420,000+" },
+        note: "Self-run bakeries can be much more profitable."
+      },
+      housekeeping: {
+        title: "Housekeeping Staff",
+        entry: { monthly: "8,000 - 15,000", yearly: "96,000 - 180,000" },
+        mid: { monthly: "15,000 - 28,000", yearly: "180,000 - 336,000" },
+        senior: { monthly: "28,000 - 50,000", yearly: "336,000 - 600,000" },
+        note: "Institutional employers often offer steady work."
+      },
+
+      // language
+      spoken: {
+        title: "Spoken English Trainer",
+        entry: { monthly: "12,000 - 25,000", yearly: "144,000 - 300,000" },
+        mid: { monthly: "25,000 - 50,000", yearly: "300,000 - 600,000" },
+        senior: { monthly: "50,000+", yearly: "600,000+" },
+        note: "Private tuition and online classes can boost income."
+      },
+      translator: {
+        title: "Translator / Interpreter",
+        entry: { monthly: "15,000 - 35,000", yearly: "180,000 - 420,000" },
+        mid: { monthly: "35,000 - 70,000", yearly: "420,000 - 840,000" },
+        senior: { monthly: "70,000+", yearly: "840,000+" },
+        note: "Specialized language pairs and certifications increase rates."
+      },
+      public: {
+        title: "Public Speaking Coach",
+        entry: { monthly: "15,000 - 30,000", yearly: "180,000 - 360,000" },
+        mid: { monthly: "30,000 - 60,000", yearly: "360,000 - 720,000" },
+        senior: { monthly: "60,000+", yearly: "720,000+" },
+        note: "Workshops and corporate training are high paying."
+      }
+    };
+
+    // helper to render salary info
+    function renderSalary(key){
+      const data = SALARIES[key];
+      const panel = document.getElementById('salaryPanel');
+      if(!data) return;
+      panel.innerHTML = ''; // clear
+
+      // title
+      const title = document.createElement('div');
+      title.className = 'role-title';
+      title.textContent = data.title;
+      panel.appendChild(title);
+
+      // box
+      const box = document.createElement('div');
+      box.className = 'salary-box';
+
+      const ranges = document.createElement('div');
+      ranges.className = 'ranges';
+
+      // entry
+      const entry = document.createElement('div');
+      entry.className = 'range';
+      entry.innerHTML = '<strong>Entry-level</strong>' +
+        '<div>Monthly: ' + data.entry.monthly + '</div>' +
+        '<div>Yearly: ' + data.entry.yearly + '</div>';
+      ranges.appendChild(entry);
+
+      const mid = document.createElement('div');
+      mid.className = 'range';
+      mid.innerHTML = '<strong>Mid-level (3–7 yrs)</strong>' +
+        '<div>Monthly: ' + data.mid.monthly + '</div>' +
+        '<div>Yearly: ' + data.mid.yearly + '</div>';
+      ranges.appendChild(mid);
+
+      const senior = document.createElement('div');
+      senior.className = 'range';
+      senior.innerHTML = '<strong>Senior / Specialist</strong>' +
+        '<div>Monthly: ' + data.senior.monthly + '</div>' +
+        '<div>Yearly: ' + data.senior.yearly + '</div>';
+      ranges.appendChild(senior);
+
+      box.appendChild(ranges);
+
+      // note
+      const note = document.createElement('div');
+      note.className = 'note';
+      note.textContent = data.note;
+
+      panel.appendChild(box);
+      panel.appendChild(note);
+
+      // scroll into view on small screens
+      setTimeout(()=> panel.scrollIntoView({behavior:'smooth', block:'center'}), 100);
+    }
+
+    // attach click handlers
+    document.querySelectorAll('.role-btn').forEach(btn=>{
+      btn.addEventListener('click', function(){
+        // toggle active class
+        document.querySelectorAll('.role-btn').forEach(b=>b.classList.remove('active'));
+        this.classList.add('active');
+        const key = this.getAttribute('data-key');
+        renderSalary(key);
+      });
+    });
+
+    // optional: select a default
+    // renderSalary('webdev');
+  </script>
+</body>
+</html>
